@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -15,6 +15,10 @@ a {
 .padre {
     display: flex;
     flex-flow: column nowrap;
+}
+
+.margen-interno {
+    padding: 0 50px;
 }
 
 .header {
@@ -93,7 +97,7 @@ h1 {
 }
 
 .section {
-    background-color: #000;
+    background-color: #f7f7f7;
     display: flex;
 }
 
@@ -109,48 +113,105 @@ h1 {
     color: #444;
     font-size: 13px;
     letter-spacing: 1px;
+    margin: 10px 10px 0px 0px;
+    flex: 1 1 45%;
+    background-color: #ececec;
+}
+
+article img{
+    width: 100%;
+}
+
+article a{
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #000;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+article a:hover{
+    background: #546ccc;
 }
 
 h3 {
     color: #fff;
     font-size: 13px;
     padding: 10px 0;
-    margin-top: -80px;
+    margin-top: -40px;
+    text-align: center;
 }
 
-h2 {
-    font-size: 25px;
-    text-transform: uppercase;
-    padding: 0 0 10px 0;
-    color: #fff;
+h3:hover{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px gray;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: black;
 }
 
 .navegacion {
-    background-color: #D0F288;
+    background-color: #000;
     flex: 1 1 100%;
+    margin: 10px 10px 0px 0px;
+}
+
+.navegacion a{
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
 }
 
 .aside {
-    background-color: #D0F288;
     flex: 1 1 auto;
+    margin: 10px 5px 10px 5px;
+    width: 900px;
+}
+
+h4 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+aside img{
+    width: 100%;
+    height: 100%;
 }
 
 .publicidad {
-    background-color: #8ADAB2;
+    text-align: center;
 }
 
 .footer {
     background-color: #000;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .pie {
-    background-color: #B6BBC4;
-    width: 300px;
+    text-align: center;
 }
 
-@media all and (max-width: 800px){
+.pie a{
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+@media all and (max-width: 1120px){
 .section {
     flex-direction: column;
 }
@@ -161,19 +222,37 @@ h2 {
 .aside {
     display: flex;
     justify-content: center;
-}
+    width: auto;
 }
 
-@media all and (max-width: 600px){
+h1 {
+    font-size: 15px;
+}
+
+.texto-principal {
+    height: 450px;
+}
+
+}
+
+@media all and (max-width: 762px){
     .articles {
         flex-direction: column;
     }
     
-    }
+    } 
 
-    @media all and (max-width: 400px){
+@media all and (max-width: 650px){
+    .off {
+        display: none;
+    }
+    .nav a{
+        font-size: 25px;
+    } 
+        }      
+
+@media all and (max-width: 400px){
         .aside {
             flex-direction: column;
-        }
-        
+        } 
         }    
